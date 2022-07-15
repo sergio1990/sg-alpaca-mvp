@@ -41,12 +41,36 @@ class SGSimpleFocuser < AlpacaDevice::AscomDevices::BaseFocuser
     @tempcomp = false
     @tempcompavailable = false
     @temperature = 20
+
+    driver = StepperRpi::Drivers::ULN2003.new(
+      mode: StepperRpi::Drivers::ULN2003::Mode::HALF_STEP,
+      pins: [14, 15, 18, 23],
+      gpio_adapter: RpiGPIOAdapter.new
+    )
+
+    @motor = StepperRpi.motor(
+      driver: driver
+    )
+    @motor.speed = 70
+  end
+
+  def connected
+    motor.is_connected
+  end
+
+  def ismoving
+    motor.is_running
+  end
+
+  def position
+    motor.position
   end
 
   def set_tempcomp(tempcomp:)
   end
 
   def set_halt
+    motor.stop
   end
 
   def set_move(position:)
@@ -67,5 +91,14 @@ class SGSimpleFocuser < AlpacaDevice::AscomDevices::BaseFocuser
   end
 
   def set_connected(connected:)
+    if connected
+      motor.connect
+    else
+      motor.disconnect
+    end
   end
+
+  private
+
+  attr_reader :motor
 end
