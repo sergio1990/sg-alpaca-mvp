@@ -38,7 +38,7 @@ class SGSimpleFocuser < AlpacaDevice::AscomDevices::BaseFocuser
     @supportedactions = []
     @absolute = false
     @ismoving = false
-    @maxincrement = 100
+    @maxincrement = 5000
     @maxstep = 65535
     @stepsize = 4
     @tempcomp = false
