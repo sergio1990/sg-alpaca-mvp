@@ -1,0 +1,16 @@
+#!/bin/bash
+
+if [[ -f .env ]]
+then
+  echo "The .env file already exists!"
+  read -n 1 -p "Make a copy before proceeding with the setup? (Y/n):" userchoice
+  normalized_input="${userchoice:-y}"
+  if [ ${normalized_input,,} == "y" ];
+  then
+    echo -e "\nMaking a backup copy..."
+    cp .env .env.old
+  fi
+fi
+
+echo -e "\nCreating a new .env file from the example one..."
+cp .env.example .env

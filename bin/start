@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if [[ ! -f .env ]]
+then
+  echo "The .env file doesn't exists!"
+  echo "Please, run 'bin/setup' script first!"
+  exit 1
+fi
+
+bundle exec foreman start

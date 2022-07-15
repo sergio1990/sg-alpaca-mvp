@@ -1,0 +1,15 @@
+#!/bin/bash
+
+if [[ ! -f .env ]]
+then
+  echo "The .env file doesn't exists!"
+  echo "Please, run 'bin/setup' script first!"
+  exit 1
+fi
+
+if [ -n "$1" ]; then
+  foreman export upstart $1 -a sg-alpaca
+else
+  echo "Usage: bin/export <path>"
+  exit 1
+fi
