@@ -23,6 +23,9 @@ class RpiGPIOAdapter < StepperRpi::GPIOAdapter
   end
 end
 
+# Basically, the implementation of this focuser class
+# should conform to the ASCOM device interface defined here:
+# https://ascom-standards.org/Help/Developer/html/T_ASCOM_DeviceInterface_IFocuserV3.htm
 class SGSimpleFocuser < AlpacaDevice::AscomDevices::BaseFocuser
   def initialize
     super(name: 'SG Simple Focuser', uuid: '72149a61-4f75-405b-8b3a-8573b76f5f5a')
@@ -74,6 +77,10 @@ class SGSimpleFocuser < AlpacaDevice::AscomDevices::BaseFocuser
   end
 
   def set_move(position:)
+    # since this focuser is the relative positioning one,
+    # the position parameter it's a number of steps the focuser needs to move
+    # and the value should be between -maxincrement..+maxincrement
+    motor.do_steps(position)
   end
 
   def set_action(action:, parameters:)
