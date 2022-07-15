@@ -3,7 +3,7 @@ require 'alpaca_device'
 require_relative './sg_simple_focuser'
 
 AlpacaDevice.configure do |config|
-  config.alpaca_port = 9000
+  config.alpaca_port = ENV['API_PORT']
 
   config.description_name = "SG Alpaca Device Beta"
   config.description_creator = "Sergey Gernyak <sergeg1990@gmail.com>"
