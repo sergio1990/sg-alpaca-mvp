@@ -7,9 +7,9 @@ then
   exit 1
 fi
 
-if [ -n "$1" ]; then
+if [ -n "$1" ] && [ -n "$2" ]; then
   bundle exec foreman export upstart $1 -a sg-alpaca -u $2
 else
-  echo "Usage: bin/export <path>"
+  echo "Usage: bin/export <path> <user>"
   exit 1
 fi
