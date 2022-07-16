@@ -1,3 +1,4 @@
+require 'bundler/setup'
 require 'alpaca_device'
 
 require_relative './sg_simple_focuser'

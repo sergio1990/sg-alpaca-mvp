@@ -1,3 +1,4 @@
+require 'bundler/setup'
 require 'alpaca_device'
 
 AlpacaDevice.configure do |config|
