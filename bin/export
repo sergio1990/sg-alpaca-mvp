@@ -10,9 +10,13 @@ fi
 if [ -n "$1" ]; then
   rndname=`echo $RANDOM | base64 | head -c 20; echo`
   temppath="/tmp/$rndname"
+  echo "Temp folder: $temppath"
   mkdir $temppath
+  echo "Generating systemd unit files into the temp folder..."
   bundle exec foreman export systemd $temppath -a sg-alpaca -u $1
+  echo "Copying generated files into the systemd folder..."
   sudo cp $temppath/. /etc/systemd/system
+  echo "Cleaning up generated files..."
   rm -rf $temppath
 else
   echo "Usage: bin/export <user>"
