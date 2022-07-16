@@ -7,9 +7,14 @@ then
   exit 1
 fi
 
-if [ -n "$1" ] && [ -n "$2" ]; then
-  bundle exec foreman export upstart $1 -a sg-alpaca -u $2
+if [ -n "$1" ]; then
+  rndname=`echo $RANDOM | base64 | head -c 20; echo`
+  temppath="/tmp/$rndname"
+  mkdir $temppath
+  bundle exec foreman export systemd $temppath -a sg-alpaca -u $1
+  sudo cp $temppath/. /etc/systemd/system
+  rm -rf $temppath
 else
-  echo "Usage: bin/export <path> <user>"
+  echo "Usage: bin/export <user>"
   exit 1
 fi
