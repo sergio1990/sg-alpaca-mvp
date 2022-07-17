@@ -14,3 +14,6 @@ fi
 
 echo -e "\nCreating a new .env file from the example one..."
 cp .env.example .env
+
+echo -e "\nInstalling gems..."
+bundle install --deployment
