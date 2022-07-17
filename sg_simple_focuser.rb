@@ -27,7 +27,7 @@ end
 # should conform to the ASCOM device interface defined here:
 # https://ascom-standards.org/Help/Developer/html/T_ASCOM_DeviceInterface_IFocuserV3.htm
 class SGSimpleFocuser < AlpacaDevice::AscomDevices::BaseFocuser
-  def initialize
+  def initialize(speed:)
     super(name: 'SG Simple Focuser', uuid: '72149a61-4f75-405b-8b3a-8573b76f5f5a')
 
     @position = 0
@@ -54,7 +54,7 @@ class SGSimpleFocuser < AlpacaDevice::AscomDevices::BaseFocuser
     @motor = StepperRpi.motor(
       driver: driver
     )
-    @motor.speed = 70
+    @motor.speed = speed
   end
 
   def connected
