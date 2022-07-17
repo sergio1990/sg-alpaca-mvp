@@ -62,6 +62,7 @@ GEM
       concurrent-ruby (~> 1.0)
 
 PLATFORMS
+  armv6l-linux-eabihf
   x86_64-linux
 
 DEPENDENCIES
