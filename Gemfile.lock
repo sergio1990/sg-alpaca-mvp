@@ -6,10 +6,18 @@ GIT
       grape (= 1.6.2)
 
 GIT
-  remote: https://github.com/sergio1990/stepper_rpi.git
-  revision: 19cb156d8ac6661a4c74ddcfa0748852ea01d275
+  remote: https://github.com/sergio1990/raspi-gpio-rb.git
+  revision: 0163bee519ca09eec51a7b00cd4ff33f4827e541
+  tag: v2.0.0
   specs:
-    stepper_rpi (0.2.0)
+    raspi-gpio (2.0.0)
+
+GIT
+  remote: https://github.com/sergio1990/stepper_rpi.git
+  revision: d015c0872fe6060f38dc0c73d97e60b01b4082e0
+  tag: v0.2.1
+  specs:
+    stepper_rpi (0.2.1)
 
 GEM
   remote: https://rubygems.org/
@@ -56,7 +64,6 @@ GEM
     rack (2.2.4)
     rack-accept (0.4.5)
       rack (>= 0.4)
-    raspi-gpio (1.0.1)
     ruby2_keywords (0.0.5)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
@@ -69,7 +76,7 @@ DEPENDENCIES
   alpaca_device!
   foreman
   puma
-  raspi-gpio
+  raspi-gpio!
   stepper_rpi!
 
 BUNDLED WITH
