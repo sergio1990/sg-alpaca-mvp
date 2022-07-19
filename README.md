@@ -16,6 +16,10 @@ API/management API/device API
   which encapsulates all the logic needed to control the stepper motor from the
 Raspberry Pi
 
+The components diagram is presented below:
+
+![components](imgs/components.png)
+
 ### Setup steps
 
 1. Prepare the Raspberry Pi - configure wi-fi, install ruby
