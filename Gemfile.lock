@@ -7,10 +7,10 @@ GIT
 
 GIT
   remote: https://github.com/sergio1990/raspi-gpio-rb.git
-  revision: 0163bee519ca09eec51a7b00cd4ff33f4827e541
-  tag: v2.0.0
+  revision: ae37b5556aa29b256ce67118ff986c877566739e
+  tag: v2.0.1
   specs:
-    raspi-gpio (2.0.0)
+    raspi-gpio (2.0.1)
 
 GIT
   remote: https://github.com/sergio1990/stepper_rpi.git
