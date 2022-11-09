@@ -18,6 +18,13 @@ if [ -n "$1" ]; then
   sudo cp -r $temppath/. /etc/systemd/system
   echo "Cleaning up generated files..."
   rm -rf $temppath
+
+  echo "Reload systemd..."
+  sudo systemctl daemon-reload
+  echo "Enable sg-alpaca daemoon..."
+  systemctl enable sg-alpaca.target
+  echo "Starting sg-alpaca daemon..."
+  systemctl start sg-alpaca.target
 else
   echo "Usage: bin/export <user>"
   exit 1

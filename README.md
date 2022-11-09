@@ -32,9 +32,6 @@ The components diagram is presented below:
 and put them into the corresponding system folder. The script  requires one
 argument - the name of the user the alpaca device will be run under; I've used
 just a user `pi` created automatically when setupping my Raspberry Pi.
-8. Run `sudo systemctl daemon-reload` to pick up added files by the systemd
-subsystem
-9. Run `systemctl start sg-alpaca.target`
 
 There are other useful commands:
 
