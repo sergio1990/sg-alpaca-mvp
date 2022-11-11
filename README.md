@@ -45,3 +45,22 @@ Ideally, after all the mentioned steps the sg-alpaca target will be
 automatically run on system startup time. The `systemctl status ...` command as
 well as `journalctl -u ...` one both can be used to get stdout&stderr outputs
 of the desired service for debugging any issues.
+
+#### USB-gadget mode
+
+Everything works just fine when the computer and the raspberry are both
+connected to the same wi-fi network. But it could be the case when there is no
+possibility to have some router nearby, hence, there should another way how to
+connect the raspberry pi to the computer, so that the former is visible as a
+appropriate Alpaca device. One of the such ways is to connect the raspberry pi
+to the computer via the USB cable, but for this the raspberry pi has to be
+configured in a specific way - there are a lot of resources over the internet
+guiding how to make the raspberry pi to be a USB-gadget, some of them includes:
+
+- [Turning your Raspberry Pi Zero into a USB Gadget](https://learn.adafruit.com/turning-your-raspberry-pi-zero-into-a-usb-gadget)
+- [RASPBERRY PI ZERO USB/ETHERNET GADGET TUTORIAL](https://www.circuitbasics.com/raspberry-pi-zero-ethernet-gadget/)
+
+Also, it's worth to mention that the raspberry pi in the USB-gadget mode can
+have troubles with proper recognizing by the Windows system. Please, take a
+look at [this](https://forums.raspberrypi.com/viewtopic.php?t=245184) forum
+thread helping out how to overcome that issue.
