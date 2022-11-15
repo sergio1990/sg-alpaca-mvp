@@ -20,7 +20,7 @@ The components diagram is presented below:
 
 ![components](imgs/components.png)
 
-### Setup steps
+## Setup steps
 
 1. Prepare the Raspberry Pi - configure wi-fi, install ruby
 2. Edit `~/.profile` by adding asdf bin&shims folders into the PATH
@@ -46,7 +46,7 @@ automatically run on system startup time. The `systemctl status ...` command as
 well as `journalctl -u ...` one both can be used to get stdout&stderr outputs
 of the desired service for debugging any issues.
 
-#### USB-gadget mode
+### USB-gadget mode
 
 Everything works just fine when the computer and the raspberry are both
 connected to the same wi-fi network. But it could be the case when there is no
@@ -67,7 +67,7 @@ have troubles with proper recognizing by the Windows system. Please, take a
 look at [this](https://forums.raspberrypi.com/viewtopic.php?t=245184) forum
 thread helping out how to overcome that issue.
 
-##### Set static IP
+#### Set static IP
 
 By default in USB-gadget mode the raspberry pi will get a dynamic IP causing
 some troubles in connection to the alpaca device each time after rebooting the
@@ -106,7 +106,7 @@ Now the raspberry PI will receive a static `192.168.0.10` IP address and you
 can verify that everything is configured correctly by pinging the IP address -
 `ping 192.168.0.10`.
 
-##### Fix internet access through the wireless connection
+#### Fix internet access through the wireless connection
 
 Setting the static IP for the raspberry PI breaks the wireless internet access.
 It could be not a problem at all depending on your particular situation. One of
