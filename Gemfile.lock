@@ -15,8 +15,8 @@ GIT
 
 GIT
   remote: https://github.com/sergio1990/stepper_rpi.git
-  revision: 5bde9e391089a9e2e5bd58ccb63ed18a8bc058c2
-  tag: v0.2.2
+  revision: d986ee78ece7e7b1a453c399b661802bfbd1bad2
+  tag: v0.3.0
   specs:
     stepper_rpi (0.2.2)
 
