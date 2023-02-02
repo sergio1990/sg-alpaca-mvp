@@ -1,9 +1,9 @@
 GIT
   remote: https://github.com/sergio1990/alpaca-device.git
-  revision: 14a0f26a31d6400dca762f0bf16f4733e719a4fa
-  tag: v0.1.1
+  revision: 4b15b2f245bb3073d13b9c5ce9f22f7b9dcd044e
+  tag: v0.1.2
   specs:
-    alpaca_device (0.1.1)
+    alpaca_device (0.1.2)
       grape (= 1.6.2)
 
 GIT
@@ -23,18 +23,18 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (7.0.4)
+    activesupport (7.0.4.2)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
       tzinfo (~> 2.0)
     builder (3.2.4)
-    concurrent-ruby (1.1.10)
+    concurrent-ruby (1.2.0)
     dry-core (1.0.0)
       concurrent-ruby (~> 1.0)
       zeitwerk (~> 2.6)
     dry-inflector (1.0.0)
-    dry-logic (1.4.0)
+    dry-logic (1.5.0)
       concurrent-ruby (~> 1.0)
       dry-core (~> 1.0, < 2)
       zeitwerk (~> 2.6)
@@ -54,7 +54,7 @@ GEM
       rack-accept
     i18n (1.12.0)
       concurrent-ruby (~> 1.0)
-    minitest (5.16.3)
+    minitest (5.17.0)
     mustermann (3.0.0)
       ruby2_keywords (~> 0.0.1)
     mustermann-grape (1.0.2)
@@ -62,16 +62,17 @@ GEM
     nio4r (2.5.8)
     puma (5.6.4)
       nio4r (~> 2.0)
-    rack (3.0.0)
+    rack (3.0.4.1)
     rack-accept (0.4.5)
       rack (>= 0.4)
     ruby2_keywords (0.0.5)
-    tzinfo (2.0.5)
+    tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     zeitwerk (2.6.6)
 
 PLATFORMS
   armv6l-linux-eabihf
+  x86_64-darwin-21
   x86_64-linux
 
 DEPENDENCIES
